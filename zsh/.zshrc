@@ -52,7 +52,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux docker autojump)
+plugins=(archlinux autojump docker git git-extras git-fast sudo systemd)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,14 +86,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename "$HOME/.zshrc"
+zstyle :compinstall filename "${HOME}/.zshrc"
 
 screenfetch
 
@@ -101,14 +100,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# plugins
-plugins=(git autojump ssh-agent)
-
 # autojump
-[[ -s /home/m/.autojump/etc/profile.d/autojump.sh ]] && source /home/m/.autojump/etc/profile.d/autojump.sh
+[[ -s ${HOME}/.autojump/etc/profile.d/autojump.sh ]] && source ${HOME}/.autojump/etc/profile.d/autojump.sh
 
 alias startx='startx &> ~/.xlog'
-#alias ll='ls -al'
 alias xup='xrdb ~/.Xresources'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
@@ -154,3 +149,4 @@ alias rncs='sudo pacman -Rncs'
 alias startlnmp='docker start mysql phpfpm nginx'
 alias stoplnmp='docker stop mysql phpfpm nginx'
 alias dellnmp='docker rm -f mysql phpfpm nginx'
+

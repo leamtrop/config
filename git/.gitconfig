@@ -1,26 +1,2 @@
-[core]
-	editor = nano -w
-	quotepath = false
-[color]
-	ui = true
-	status = auto
-	diff = auto
-	branch = auto
-	interactive = auto
-[alias]
-	lg = log --color --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
-    lg1 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    st = status
-	co = checkout
-	br = branch
-	ci = commit
-	df = diff
-	dfs = diff --staged
-	di = diff
-	dic = diff --cached
-[user]
-	email = leamtrop@gmail.com
-	name = leamtrop
-	signingkey = CFAE9C92FA2D6A10
-[commit]
-	gpgsign = true
+[include]
+    path = .gitconfig_main

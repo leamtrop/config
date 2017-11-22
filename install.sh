@@ -12,3 +12,6 @@ ln -s ~/.config/X/.xinitrc ~/.xinitrc
 # .zshrc
 ln -s ~/.config/zsh/.zshrc ~/.zshrc
 
+# Mark git/.gitconfig as skip-worktree index
+git update-index --skip-worktree git/.gitconfig
+

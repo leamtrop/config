@@ -1,26 +1,63 @@
 [core]
-	editor = nano -w
-	quotepath = false
+    quotepath = false
+    autocrlf = false
+    preloadindex = true
+    fscache = true
 [color]
-	ui = true
-	status = auto
-	diff = auto
-	branch = auto
-	interactive = auto
+    ui = true
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
 [alias]
-	lg = log --color --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+    a = add
+    b = branch
+    ba = branch -a
+    bd = branch -d
+    bdd = branch -D
+    br = branch -r
+    co = checkout
+    cob = checkout -b
+    c = commit
+    ca = commit -a
+    cm = commit -m
+    cl = clone
+    cp = cherry-pick
+    cpa = cherry-pick --abort
+    cpc = cherry-pick --continue
+    d = diff
+    ds = diff --staged
+    dc = diff --cached
+    dk = diff --check
+    f = fetch
+    fo = fetch origin
+    fu = fetch upstream
+    g = grep -p
+    l = log --oneline
+    lg = log --color --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
     lg1 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    m = merge
+    ma = merge --abort
+    mc = merge --continue
+    ms = merge --skip
+    ps = push
+    pso = push origin
+    psom = push origin master
+    pl = pull
+    plo = pull origin
+    plom = pull origin master
+    plu = pull upstream
+    plum = pull upstream master
+    rb = rebase
+    rba = rebase --abort
+    rbc = rebase --continue
+    rbi = rebase --interactive
+    rbs = rebase --skip
+    re = reset
+    rh = reset HEAD
+    r = remote
     st = status
-	co = checkout
-	br = branch
-	ci = commit
-	df = diff
-	dfs = diff --staged
-	di = diff
-	dic = diff --cached
-[user]
-	email = leamtrop@gmail.com
-	name = leamtrop
-	signingkey = CFAE9C92FA2D6A10
-[commit]
-	gpgsign = true
+[gc]
+    auto = 256
+[push]
+    default = current

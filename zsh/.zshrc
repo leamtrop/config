@@ -76,6 +76,13 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# Aliases
+#
+# Some people use a different file for aliases
+if [ -f "${HOME}/.zsh_aliases" ]; then
+  source "${HOME}/.zsh_aliases"
+fi
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -102,51 +109,4 @@ compinit
 
 # autojump
 [[ -s ${HOME}/.autojump/etc/profile.d/autojump.sh ]] && source ${HOME}/.autojump/etc/profile.d/autojump.sh
-
-alias startx='startx &> ~/.xlog'
-alias xup='xrdb ~/.Xresources'
-alias grep='grep --color=auto'
-alias ls='ls --color=auto'
-alias mkdir='mkdir -p -v'
-
-# just some convenience aliases
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias l='ls -lhX --group-directories-first'
-alias ll='ls -alqhH --group-directories-first --color=auto --time-style="+%Y-%m-%d %H:%M:%S"'
-alias df='df -h'
-alias :q='exit'
-alias ZZ='exit'
-alias lsgroups='cut -d: -f1 /etc/group'
-alias o='xdg-open'
-alias wifi='sudo wifi-menu'
-alias vi='vim'
-
-# programs
-alias mix=alsamixer
-alias tab='i3-msg layout tabbed && '
-alias chromium='nohup chromium >/dev/null 2>&1'
-alias dropbox='nohup proxychains dropbox >/dev/null 2>&1'
-alias teamviewer='sudo systemctl start teamviewerd.service && teamviewer'
-alias subl='LD_PRELOAD=/opt/sublime_text_3/libsublime-imfix.so subl3'
-alias subl3='LD_PRELOAD=/opt/sublime_text_3/libsublime-imfix.so subl3'
-
-# config files
-alias i3c='vim ~/.i3/config'
-alias i3s='vim ~/.i3/i3status.conf'
-alias ala='vim ${ZSH}/custom/aliases.zsh'
-
-# pacman stuff
-alias pacs='sudo pacman -S'
-alias pacss='pacman -Ss'
-alias pacr='sudo pacman -Rns'
-alias aur='packer -S'
-alias syu='sudo pacman -Syu'
-alias rncs='sudo pacman -Rncs'
-
-# Docker
-alias startlnmp='docker start mysql phpfpm nginx'
-alias stoplnmp='docker stop mysql phpfpm nginx'
-alias dellnmp='docker rm -f mysql phpfpm nginx'
 

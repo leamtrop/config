@@ -10,7 +10,12 @@ git clone git@github.com:leamtrop/config.git ~/.config
 cd ~/.config
 ```
 
-3. Run `install.sh`
+3. Update git submodule
+```bash
+git submodule update --init
+```
+
+4. Run `install.sh`
 ```bash
 sh install.sh
 ```

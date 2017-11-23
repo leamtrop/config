@@ -13,8 +13,10 @@ fi
 
 # X windows config, only for Arch Linux
 if [[ "$uname" != *CYGWIN* ]]; then
-	ln -s ~/.config/X/.Xresources ~/.Xresources
-    ln -s ~/.config/X/.xinitrc ~/.xinitrc
+    if [ ! -f "${HOME}/.Xresources" && ! -f "${HOME}/.xinitrc"]; then
+        ln -s ~/.config/X/.Xresources ~/.Xresources
+        ln -s ~/.config/X/.xinitrc ~/.xinitrc
+    fi
 fi
 
 # .zshrc

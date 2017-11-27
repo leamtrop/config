@@ -16,3 +16,6 @@
 [submodule "vendor/zsh-users/zsh-history-substring-search"]
 	path = vendor/zsh-users/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search.git
+[submodule "vendor/leamtrop/git-prompt-status"]
+	path = vendor/leamtrop/git-prompt-status
+	url = https://github.com/leamtrop/git-prompt-status.git

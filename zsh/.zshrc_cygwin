@@ -157,8 +157,11 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%F{red}*"
 #  fi
 #}
 
+source $DOTFILES/vendor/leamtrop/git-prompt-status/git-prompt-status.zsh
+
 PROMPT_USER="$(username)"
-PROMPT='%F{blue}%~%F{yellow}$(git_branch)%F{reset}%F{blue%}# '
+#PROMPT='%F{blue}%~%F{yellow}$(git_branch)%F{reset}%F{blue%}# '
+PROMPT='%F{blue}%~%F{blue%}# '
 
 source $DOTFILES/vendor/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $DOTFILES/vendor/zsh-users/zsh-history-substring-search/zsh-history-substring-search.zsh

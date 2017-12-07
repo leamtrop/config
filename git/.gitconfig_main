@@ -53,9 +53,11 @@
     rbc = rebase --continue
     rbi = rebase --interactive
     rbs = rebase --skip
-    re = reset
+    rs = reset
     rh = reset HEAD
-    r = remote
+    rss = reset --soft
+    rsh = reset --hard
+    rm = remote
     st = status
 [gc]
     auto = 256

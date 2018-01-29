@@ -44,6 +44,7 @@
     pso = push origin
     psom = push origin master
     pl = pull
+    plc = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
     plo = pull origin
     plom = pull origin master
     plu = pull upstream
@@ -58,6 +59,7 @@
     rss = reset --soft
     rsh = reset --hard
     rm = remote
+    rv = revert
     st = status
 [gc]
     auto = 256

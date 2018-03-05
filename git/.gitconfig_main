@@ -36,6 +36,7 @@
     l = log --oneline
     lg = log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --format=format:'%C(yellow)%h%Creset %s %C(bold blue)<%an> %Cgreen(%ad)%Cred%d%Creset' --abbrev-commit
     lg1 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lgs = !git lg --stat
     m = merge
     ma = merge --abort
     mc = merge --continue
@@ -65,3 +66,5 @@
     auto = 256
 [push]
     default = current
+[pull]
+    rebase = true
